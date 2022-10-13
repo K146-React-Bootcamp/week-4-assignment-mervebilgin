@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
+
 function App() {
   
   return (
-    <div>
-      Hello I am Merve
+    <div className="App">
+      <Navbar/>
     </div>
   );
 }
