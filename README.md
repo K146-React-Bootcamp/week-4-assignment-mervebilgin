@@ -2,6 +2,12 @@
 
 In this Reactjs project, I made an responsive Atlantis Question Answer website. I used React hooks, modern CSS, swiper js, framer motion, and many more. For contact, I used the Email js library. To make this site more functional and practical, I implemented  dark and light mode with the useContext hook.
 
+
+
+https://user-images.githubusercontent.com/47225405/195882888-5b7c80fe-0a9b-4992-b1d6-92ee1ac8d438.mp4
+
+
+
 ### UseState Hook
 In React, functional components are basically stateless components as you cannot manage the state in them. But with the introduction of Hooks in React 16.8 version, If you write a function component and realize you need to add some state to it, you can use useState Hook.
 
