@@ -1,3 +1,4 @@
+import Howitworks from "./components/Howitworks/Howitworks";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import "./App.css";
@@ -19,6 +20,7 @@ function App() {
 
       <Navbar/>
       <Intro/>
+      <Howitworks/>
     </div>
   );
 }
