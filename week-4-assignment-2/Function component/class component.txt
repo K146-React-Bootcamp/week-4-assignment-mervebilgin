@@ -1,0 +1,47 @@
+## React Functional ve Class Components Farkları ve Kullanımı
+
+Her ikisi de aynı görevi yapmakta olmasına rağmen Class component yerine functional component kullanmak daha çok tavsiye edilir. 
+Nedenleri ise;
+– Yazması, okunması ve test edilmesi kolaydır.
+– Daha az kod yazmanızı sağlar.
+– Daha kolay pratik yapmanızı sağlar.
+– Performans açısından daha verimlidir.
+
+>> Class component örneği;
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+ 
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+}
+
+
+>> Functional component örneği;
+import React, { useState } from 'react';
+ 
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+ 
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
