@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Atlantis Question Answer Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this Reactjs project, I made an responsive Atlantis Question Answer website. I used React hooks, modern CSS, swiper js, framer motion, and many more. For contact, I used the Email js library. To make this site more functional and practical, I implemented  dark and light mode with the useContext hook.
 
-## Available Scripts
+### UseState Hook
+In React, functional components are basically stateless components as you cannot manage the state in them. But with the introduction of Hooks in React 16.8 version, If you write a function component and realize you need to add some state to it, you can use useState Hook.
 
-In the project directory, you can run:
+```
+const [count, setCount] = useState()
+```
 
-### `yarn start`
+count: the current state
+setCount: a function that updates the state
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### UseContext Hook
+useContext” hook is used to create common data that can be accessed throughout the component hierarchy without passing the props down manually to each level. Context defined will be available to all the child components without involving “props”.
+_In the project, I created the dark and light mode with the useContext hook._
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## yarn
+Yarn is a package manager that doubles down as project manager.
 
-### `yarn build`
+### Installing
+```
+yarn --version
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_yarn start_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## React Unicons
+1000+ Pixel-perfect vector icons as React Components. These icons are designed by Iconscout.
 
-### `yarn eject`
+### Installing
+```
+npm i @iconscout/react-unicons
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Framer Motion
+An open source motion library for React, made by Framer.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installing
+```
+yarn add framer-motion
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## EmailJS
+Send emails, html and attachments (files, streams and strings) from node.js to any smtp server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Features
+- Emails are queued and the queue is sent asynchronously 
+- Supports sending html emails and emails with multiple attachments (MIME)
+- Attachments can be added as strings, streams or file paths
+- Supports utf-8 headers and body
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installing 
+`````
+npm install emailjs
+````
 
-### Code Splitting
+## SwiperJS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior. It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Installing
+```
+npm i swiper
+```
