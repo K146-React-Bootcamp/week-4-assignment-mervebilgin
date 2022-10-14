@@ -2,6 +2,7 @@ import UserComments from "./components/UserComments/UserComments";
 import Howitworks from "./components/Howitworks/Howitworks";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
+import Contact from "./components/Contact/Contact";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
       <Intro/>
       <Howitworks/>
       <UserComments/>
+      <Contact/>
     </div>
   );
 }
