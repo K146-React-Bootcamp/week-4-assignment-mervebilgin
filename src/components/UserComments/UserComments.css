@@ -1,0 +1,28 @@
+.usercomments {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 90vh;
+  margin-top: -4rem;
+
+  /* scroll */
+  align-items: center;
+}
+
+.awesome {
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  .usercomments {
+    flex-direction: column;
+    height: 55rem;
+    padding: 0;
+    gap: 5rem;
+  }
+
+}

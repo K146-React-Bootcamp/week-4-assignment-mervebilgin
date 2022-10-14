@@ -1,6 +1,8 @@
+import UserComments from "./components/UserComments/UserComments";
 import Howitworks from "./components/Howitworks/Howitworks";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
+
 import "./App.css";
 
 import { useContext } from "react";
@@ -21,6 +23,7 @@ function App() {
       <Navbar/>
       <Intro/>
       <Howitworks/>
+      <UserComments/>
     </div>
   );
 }
