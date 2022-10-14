@@ -3,6 +3,7 @@ import Howitworks from "./components/Howitworks/Howitworks";
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -26,6 +27,7 @@ function App() {
       <Howitworks/>
       <UserComments/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }
