@@ -1,0 +1,78 @@
+## Lifecycle Fonksiyonları
+React.Component soyut temel bir sınıftır, bu nedenle doğrudan React.Componente başvurmak mantıklı değildir. 
+Bunun yerine, genellikle classın alt classını tanımlayıp, bir render() metodu tanımlarsınız.
+
+Normalde bir React componentini düz bir JavaScript sınıfı olarak tanımlarsınız:
+
+class Greeting extends React.Component {
+  render() {
+    return <h1>Merhaba, {this.props.name}</h1>;
+  }
+}
+
+1) Mounting (Oluşturmak):
+Bu fonksiyonlar, bir component örneği oluşturulurken ve DOM’a eklendiğinde çağrılır:
+* constructor()
+* componentWillMount()
+* render()
+* componentDidMount()
+
+
+2) Updating (Güncellemek): 
+Bir güncelleme, props ya da state değişikliklerinden kaynaklanabilir. Bu fonksiyonlar, bir componentin güncellenmesiyle çağrılır.
+* componentWillReceiveProps()
+* shouldComponentUpdate()
+* componentWillUpdate()
+* render()
+* componentDidUpdate()
+
+
+3) Unmounting (Kaldırmak)
+Bu fonksiyon, bir component DOM’dan kaldırıldığında çağrılır:
+* componentWillUnmount()
+
+
+4) Error Handling (Hata işleme)
+Bu fonksiyon, render sırasında lifecycle fonksiyonlarında veya herhangi bir alt componentin constructoründe bir hata olduğunda çağrılır.
+* componentDidCatch()
+
+
+5) Diğer API'ler
+Her component aşağıdaki API’leride içerisinde barındırır:
+* setState()
+* forceUpdate()
+
+
+6) Class Property
+    defaultProps
+
+
+7) render()
+   render()
+render() fonksiyonu, componentin state’ini değiştirmez, çağrıldığında her seferinde aynı sonucu return eder. Tarayıcıyla etkileşime 
+girmeniz gerekiyorsa, bunun yerine ` componentDidMount()` ya da diğer lifecycle fonksiyonları ile çalışmalarınızı gerçekleştirin.
+
+
+8) constructor()
+   constructor(props)
+Bir React componentinin constructorü, oluşturulmadan önce çağrılır. Bir React.Component alt sınıfı için constructorü uygularken, herhangi bir 
+koddan önce super(props)u çağırmalısınız. Aksi takdirde, this.props constructorde hatalara neden olur.
+
+
+9) componentWillMount()
+componentWillMount(), component oluşturulmadan hemen önce çağrılır, dolayısıyla bu yöntemde eş zamanlı olarak setState() başlamayacaktır. 
+Genellikle, bunun yerine constructor()ü kullanılması önerilir.
+
+
+10) componentDidMount()
+componentDidMount(), bir component render edildikten hemen sonra çağrılır. Uzak bir uç noktadan veri yüklemeniz gerekiyorsa, bu ağ isteğini başlatmak için iyi bir yerdir.
+
+
+11) componentWillReceiveProps(nextProps)
+12) shouldComponentUpdate(nextProps, nextState)
+13) componentWillUpdate(nextProps, nextState)
+14) componentDidUpdate(prevProps, prevState)
+15) componentWillUnmount()
+16) componentDidCatch()
+17) setState()
+18) component.forceUpdate(callback)
