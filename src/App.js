@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import Intro from "./components/Intro/Intro";
 import "./App.css";
 
 import { useContext } from "react";
@@ -17,7 +18,7 @@ function App() {
 
 
       <Navbar/>
-    
+      <Intro/>
     </div>
   );
 }
