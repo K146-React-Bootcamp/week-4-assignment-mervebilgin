@@ -1,0 +1,49 @@
+## ReactJs Component Nedir ?
+
+Basite indirgemek gerekirse React Component ‘leri kullanıcı arayüzünü şekillendiren, belirli görevleri olan, 
+class veya fonksiyon olarak tanımlanmış, geriye react elementleri döndüren, opsiyonel olarak parametre 
+alan yapı taşlarıdır. 
+
+Temel olarak iki çeşit component ‘imiz mevcut Class-Based ve Functional.
+
+
+>> Class-Based Components  (Sınıf Tabanlı)
+React kütüphanesi içerisindeki “Component” class ‘ından extend olan javascript class ‘ları olarak tanımlayabiliriz. 
+Bu class ‘lar React Component ‘ten extend olduğu için Component Lifecycle süreçlerini de barındırır.
+
+Örnek: 
+import React, { Component } from 'react';
+ 
+class ClassBasedComponent extends Component {
+  render() {
+    return (
+      <div>
+        <h1> I'm {this.props.type}.</h1>
+      </div>
+    )
+  }
+}
+ 
+export default ClassBasedComponent;
+
+Basit bir class-based component yukarıdaki şekilde oluşturulabilir. 
+render() metodu ile içerisine yazılan JSX ‘i DOM içerisine yerleştirir.
+
+
+>> Functional Components  (Fonksiyonel)
+Basit olarak react elementleri (JSX) dönen javascript fonksiyonlarıdır. Dummy, dumb component 
+olarak da isimlendirildiği oluyor. Bunun sebebi temelde state ‘e erişemediklerindendir. 
+Ancak bu yapı v.16.8 ile biraz değişmiş oldu. artık fonksiyonel component ‘ler de state ‘e erişim sağlanılabiliyor.
+
+Örnek:
+import React from 'react'
+ 
+const FunctionalComponent = props => {
+  return (
+    <div>
+      <h1> I'm {props.type}.</h1>
+    </div>
+  )
+}
+ 
+export default FunctionalComponent;
