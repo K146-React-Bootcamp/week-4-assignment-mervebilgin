@@ -1,11 +1,12 @@
-import UserComments from "./components/UserComments/UserComments";
-import Howitworks from "./components/Howitworks/Howitworks";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
+import Howitworks from "./components/Howitworks/Howitworks";
+import UserComments from "./components/UserComments/UserComments";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-
-import "./App.css";
 
 import { useContext } from "react";
 import { themeContext } from "./Context";
@@ -19,15 +20,20 @@ function App() {
       style={{
         background: darkMode ? "black" : "",
         color: darkMode ? "white" : "",
-      }}>
+      }}
+    >
+      <BrowserRouter>
+        <Navbar />
 
+        <Routes>
+          <Route path="*" element={<UserComments />} />
+          <Route path="" element={<Intro />} />
+          <Route path="howitworks" element={<Howitworks />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
 
-      <Navbar/>
-      <Intro/>
-      <Howitworks/>
-      <UserComments/>
-      <Contact/>
-      <Footer/>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
